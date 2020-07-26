@@ -12,6 +12,15 @@ The purpose of this project was to look into how Cobalt Strike's [inject](https:
 
 > This privilege allows the caller all access to the process, including the ability to call TerminateProcess(), CreateRemoteThread(), and other potentially dangerous Win32 APIs on the target process.
 
+## Example
+### The process
+`notepad.exe` with PID 1716:
+![notepad](./screenshots/impersonateme-notepad.PNG)
+
+### Meterpreter
+From a session as `Administrator`, injecting into the notepad PID returns a session as `impersonateme`:
+![meterpreter](./screenshots/impersonateme-meterpreter.PNG)
+
 To use it, change the PID:
 ```csharp
 Int32 PID = 20636;

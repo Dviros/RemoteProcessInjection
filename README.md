@@ -66,3 +66,4 @@ And the shellcode:
 0xd5 };
 ```
 
+Note, this is not AV safe. It was an study project for me.
